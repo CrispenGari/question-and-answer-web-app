@@ -1,54 +1,42 @@
 # What is this?
 
-This is a simple Machine learning React app that draws face mesh points on faces from a web camera in real time using a pre-trained model from tensorflow called `@tensorflow-models/facemesh`. This application is cappable of detecting 468 face points and draw the face mesh on each face on the web camera.
+This is a simple Machine learning React app that answers the questions asked based on the paragraph provided using a pre-trained model from tensorflow called `@tensorflow-models/qna`. This application is cappable of answering basic question asked by the users of the application.
+
+- This application have a backend and front-end
 
 ## This app is using
 
-- React WebCam
+- Express - for backend saving of the model
 - Tensorflow.js
+- Material-ui for front-end icons, cores components and lab components
+- React.js
 
 ## Installation of required dependencies
 
-## Installation of React WebCam using `npm`
+## Installation of Material-ui using `npm`
 
-`$ npm i react-webcam`
+`$ npm i @material-ui/core @material-ui/icons @material-ui/lab`
 
-## Installation of React WebCam using `yarn`
+## Installation of Material-ui using `yarn`
 
-`yarn add react-webcam`
+`yarn add @material-ui/core @material-ui/icons @material-ui/lab`
 
 ## Installation of tensorflow and the pretrained model for face points detections model using `npm`
 
-`$ npm i @tensorflow/tfjs-core @tensorflow/tfjs @tensorflow-models/facemesh @tensorflow/tfjs-converter @tensorflow/tfjs-backend-webgl or @tensorflow/tfjs-backend-wasm`
+`$ npm i @tensorflow/tfjs-core @tensorflow/tfjs @tensorflow-models/qna @tensorflow/tfjs-converter`
 
 ## Installation of tensorflow and the pretrained model for face points detections model using using yarn
 
 ```
-$ yarn add @tensorflow-models/facemesh
+$ yarn add @tensorflow-models/qna
 $ yarn add @tensorflow/tfjs-core, @tensorflow/tfjs-converter
-$ yarn add @tensorflow/tfjs-backend-wasm # or @tensorflow/tfjs-backend-webgl
-
 ```
 
-## Scripts tags
+## The URL to the repository of `@tensorflow-models/qna` models.
 
-In order for this application to work we must include the following scripts in the index.html file as well if you don't want to do the installation process
+[click here](https://github.com/tensorflow/tfjs-models/tree/master/qna)
 
-```
-<!-- Require the peer dependencies of facemesh. -->
-<script src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
-<script src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
-
-<!-- You must explicitly require a TF.js backend if you're not using the tfs union bundle. -->
-<script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.1.0/dist/tf-backend-wasm.js"></script>
-<!-- Alternatively you can use the WebGL backend: <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script> -->
-```
-
-## The URL to the repository of blazeface models.
-
-[click here](https://github.com/tensorflow/tfjs-models/tree/master/facemesh)
-
-# How to test this application.
+# How to test this application. (still working on it)
 
 ### Clone this repository using the following command:
 
@@ -56,7 +44,7 @@ In order for this application to work we must include the following scripts in t
 
 ### Navigate to the project folder of this app by running the following command:
 
-`cd face-landmarks-detection-js-face-mesh-`
+`cd `
 
 ### Install the dependencies by running the following command:
 

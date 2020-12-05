@@ -6,16 +6,21 @@ import * as qna from "@tensorflow-models/qna";
 const Form = ({ setAnswers, setException }) => {
   const [questionText, setQuestionText] = useState("");
   const [paragraph, setParagraph] = useState("");
-  
 
-  console.log(process.cwd())
+  console.log(process.cwd());
   const answer = (event) => {
     event.preventDefault();
     if (questionText) {
       (async () => {
         const network = await qna.load({
-          modelUrl: 'file://'+ process.cwd() +'/model.json'
+          modelUrl: "http://localhost:3001/model.json",
         });
+        /*{
+          modelUrl:
+            "https://raw.githubusercontent.com/CrispenGari/question-and-answer-web-app/main/src/model.json",
+        }
+
+        */
         console.log(network);
         const answers = await network.findAnswers(questionText, paragraph);
         console.log(answers);
